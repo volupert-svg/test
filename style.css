@@ -54,11 +54,34 @@ h1 {
 
 #numbers-container {
     display: flex;
-    justify-content: center;
-    gap: 1.2rem;
+    flex-direction: column;
+    gap: 1.5rem;
     margin-bottom: 2.5rem;
-    flex-wrap: wrap;
     min-height: 80px;
+}
+
+.lotto-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: inset 0 2px 5px var(--shadow-color);
+}
+
+.bonus-container {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.bonus-indicator {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
 #generate-button {

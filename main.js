@@ -70,22 +70,52 @@ document.getElementById('generate-button').addEventListener('click', () => {
     const numbersContainer = document.getElementById('numbers-container');
     numbersContainer.innerHTML = '';
 
-    const numbers = [];
-    while (numbers.length < 6) {
-        const num = Math.floor(Math.random() * 45) + 1;
-        if (!numbers.includes(num)) {
-            numbers.push(num);
-        }
-    }
-    numbers.sort((a, b) => a - b);
+    for (let i = 0; i < 5; i++) {
+        const row = document.createElement('div');
+        row.className = 'lotto-row';
+        numbersContainer.appendChild(row);
 
-    numbers.forEach((number, index) => {
+        const numbers = [];
+        while (numbers.length < 6) {
+            const num = Math.floor(Math.random() * 45) + 1;
+            if (!numbers.includes(num)) {
+                numbers.push(num);
+            }
+        }
+        numbers.sort((a, b) => a - b);
+
+        let bonusNum;
+        do {
+            bonusNum = Math.floor(Math.random() * 45) + 1;
+        } while (numbers.includes(bonusNum));
+
+        // Render main numbers
+        numbers.forEach((number, index) => {
+            setTimeout(() => {
+                const lottoBall = document.createElement('lotto-ball');
+                lottoBall.setAttribute('number', number);
+                row.appendChild(lottoBall);
+            }, (i * 700) + (index * 100));
+        });
+
+        // Render bonus number
         setTimeout(() => {
-            const lottoBall = document.createElement('lotto-ball');
-            lottoBall.setAttribute('number', number);
-            numbersContainer.appendChild(lottoBall);
-        }, index * 100);
-    });
+            const bonusContainer = document.createElement('div');
+            bonusContainer.className = 'bonus-container';
+            
+            const plusSign = document.createElement('span');
+            plusSign.className = 'bonus-indicator';
+            plusSign.textContent = '+';
+            
+            const bonusBall = document.createElement('lotto-ball');
+            bonusBall.setAttribute('number', bonusNum);
+            bonusBall.setAttribute('color', '#ff5722'); // Distinct color for bonus ball
+            
+            bonusContainer.appendChild(plusSign);
+            bonusContainer.appendChild(bonusBall);
+            row.appendChild(bonusContainer);
+        }, (i * 700) + (6 * 100) + 200);
+    }
 });
 
 // Theme Toggle Logic

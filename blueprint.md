@@ -15,10 +15,12 @@ This is a visually appealing and interactive web application for generating rand
     *   **Lotto Balls:** Animated appearance with random vibrant colors and hover effects.
 *   **Web Components:** The `<lotto-ball>` element encapsulates its own styling and logic using Shadow DOM, ensuring consistent rendering.
 *   **Animations:** Smooth transitions for theme switching and staggered animations for newly generated numbers.
+*   **Multi-set Generation:** Generates 5 sets of numbers at once for better user experience.
+*   **Bonus Number:** Each set includes a distinct bonus number, following official lottery rules.
 
 ## Current Plan
 
-1.  **Bug Fix:** Resolved the issue where numbers were not appearing by moving the `LottoBall` rendering logic to the `connectedCallback` lifecycle method.
-2.  **Theme Implementation:** Added a theme toggle feature with CSS variables and JavaScript logic for persistent user preference.
-3.  **UI Enhancement:** Improved the overall look with deeper shadows, refined spacing, and better mobile responsiveness.
-4.  **Deployment:** Pushing the updated codebase to the GitHub repository for deployment.
+1.  **Bonus Number & Multi-set Generation:** Update the generation logic in `main.js` to produce 5 sets of 6+1 numbers.
+2.  **UI Layout Update:** Modify `index.html` and `style.css` to display the sets in a structured row-based layout.
+3.  **Bonus Number Styling:** Add a visual indicator for the bonus number (e.g., a "+" sign and specific styling).
+4.  **Git & Deployment:** Commit changes to the repository and ensure the latest version is deployed.
