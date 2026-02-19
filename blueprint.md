@@ -1,21 +1,24 @@
-
 # Lotto Number Generator
 
 ## Overview
 
-This is a simple, visually appealing web application that allows users to generate random lottery numbers. It is built with modern HTML, CSS, and JavaScript, leveraging Web Components for a modular structure.
+This is a visually appealing and interactive web application for generating random lottery numbers. It features a modern design, responsive layout, and dark/light mode support.
 
 ## Style, Design, and Features
 
-*   **Layout:** A centered, card-like interface.
-*   **Color Palette:** A vibrant and energetic color scheme with gradients and shadows to create depth.
-*   **Typography:** Clear, legible fonts with good hierarchy.
-*   **Interactivity:** A "Generate Numbers" button with a glowing effect on hover. The generated numbers will be displayed in styled individual elements.
-*   **Web Component:** A `<lotto-ball>` custom element is used to display each generated number, encapsulating its style and behavior.
-*   **Background:** A subtle noise texture on the background for a premium feel.
+*   **Layout:** Centered card interface with a modern, clean aesthetic.
+*   **Color Palette:** Supports both Light and Dark themes. Light mode uses soft whites and vibrant blues, while Dark mode uses deep grays and high-contrast accents.
+*   **Typography:** Bold, modern sans-serif typography with strong hierarchy.
+*   **Interactivity:**
+    *   **Generate Button:** Features a gradient background and a "pop" animation on hover.
+    *   **Theme Toggle:** A floating button to switch between dark and light modes, with persistent storage in `localStorage`.
+    *   **Lotto Balls:** Animated appearance with random vibrant colors and hover effects.
+*   **Web Components:** The `<lotto-ball>` element encapsulates its own styling and logic using Shadow DOM, ensuring consistent rendering.
+*   **Animations:** Smooth transitions for theme switching and staggered animations for newly generated numbers.
 
 ## Current Plan
 
-1.  **Update `index.html`:** Set up the basic structure for the lottery number generator, including a title, a container for the numbers, and a generation button.
-2.  **Update `style.css`:** Apply modern styling to the elements, including a responsive layout, custom fonts, color variables, and interactive effects.
-3.  **Update `main.js`:** Implement the lottery number generation logic and create a custom element (`<lotto-ball>`) to display the numbers in a visually appealing way.
+1.  **Bug Fix:** Resolved the issue where numbers were not appearing by moving the `LottoBall` rendering logic to the `connectedCallback` lifecycle method.
+2.  **Theme Implementation:** Added a theme toggle feature with CSS variables and JavaScript logic for persistent user preference.
+3.  **UI Enhancement:** Improved the overall look with deeper shadows, refined spacing, and better mobile responsiveness.
+4.  **Deployment:** Pushing the updated codebase to the GitHub repository for deployment.
