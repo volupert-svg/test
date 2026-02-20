@@ -19,6 +19,7 @@ This is a visually appealing and interactive web application for generating rand
 *   **Multi-set Generation:** Generates 5 sets of numbers at once for better user experience.
 *   **Bonus Number:** Each set includes a distinct bonus number, following official lottery rules.
 *   **Disqus Comments:** Integrated community discussion at the bottom of the page with dark/light mode compatibility.
+*   **Google AdSense:** Integrated for monetization with Auto Ads and verified via `ads.txt`.
 
 ## Current Plan
 
@@ -28,3 +29,4 @@ This is a visually appealing and interactive web application for generating rand
 4.  **JavaScript Integration:** Implement AJAX submission in `main.js` to prevent page reloads and show success/error messages.
 5.  **Deployment:** Configured Firebase Hosting (`firebase.json`). Pushed to GitHub for Cloudflare Pages deployment.
 6.  **Disqus Integration:** Added Disqus comment thread section and initialization script.
+7.  **Google AdSense Integration:** Added the AdSense script to `index.html` and created `ads.txt` for site verification and monetization.
