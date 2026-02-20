@@ -18,6 +18,7 @@ This is a visually appealing and interactive web application for generating rand
 *   **Animations:** Smooth transitions for theme switching and staggered animations for newly generated numbers.
 *   **Multi-set Generation:** Generates 5 sets of numbers at once for better user experience.
 *   **Bonus Number:** Each set includes a distinct bonus number, following official lottery rules.
+*   **Disqus Comments:** Integrated community discussion at the bottom of the page with dark/light mode compatibility.
 
 ## Current Plan
 
@@ -25,4 +26,5 @@ This is a visually appealing and interactive web application for generating rand
 2.  **HTML Structure:** Update `index.html` with a clearer form structure and status message containers.
 3.  **Styling:** Refine `style.css` to add a "lifted" card effect for the form and better input focus states.
 4.  **JavaScript Integration:** Implement AJAX submission in `main.js` to prevent page reloads and show success/error messages.
-5.  **Deployment:** Configured Firebase Hosting (`firebase.json`). Pending user authentication and project selection.
+5.  **Deployment:** Configured Firebase Hosting (`firebase.json`). Pushed to GitHub for Cloudflare Pages deployment.
+6.  **Disqus Integration:** Added Disqus comment thread section and initialization script.
