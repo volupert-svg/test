@@ -133,3 +133,129 @@ h1 {
 lotto-ball {
     /* Styles are now handled in the shadow DOM for encapsulation */
 }
+
+/* Partnership Form Styles */
+#partnership-form {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 2px solid var(--shadow-color);
+}
+
+#partnership-form h2 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.form-description {
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+#partnership-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    transition: transform 0.3s ease;
+}
+
+#partnership-form form:focus-within {
+    transform: translateY(-5px);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+#partnership-form label {
+    font-weight: 700;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#partnership-form input,
+#partnership-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    font-family: var(--font-family-sans-serif);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+#partnership-form input:focus,
+#partnership-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background-color: var(--card-bg);
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+}
+
+#partnership-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#submit-button {
+    background: linear-gradient(135deg, var(--success-color), #218838);
+    color: white;
+    border: none;
+    padding: 1.2rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+    margin-top: 1rem;
+}
+
+#submit-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.5);
+    filter: brightness(1.1);
+}
+
+#submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#form-status {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    display: none;
+}
+
+#form-status.success {
+    display: block;
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--success-color);
+    border: 1px solid var(--success-color);
+}
+
+#form-status.error {
+    display: block;
+    background-color: rgba(220, 53, 69, 0.1);
+    color: var(--danger-color);
+    border: 1px solid var(--danger-color);
+}

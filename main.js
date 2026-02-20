@@ -145,3 +145,58 @@ function updateThemeIcon(theme) {
     const icon = theme === 'dark' ? '☀️' : '🌙';
     themeToggle.textContent = icon;
 }
+
+// Partnership Form AJAX Submission
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+const submitButton = document.getElementById('submit-button');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(contactForm);
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+        
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                formStatus.textContent = 'Thanks! Your message has been sent successfully.';
+                formStatus.className = 'success';
+                contactForm.reset();
+            } else {
+                const data = await response.json();
+                if (Object.hasOwn(data, 'errors')) {
+                    formStatus.textContent = data['errors'].map(error => error['message']).join(', ');
+                } else {
+                    formStatus.textContent = 'Oops! There was a problem submitting your form.';
+                }
+                formStatus.className = 'error';
+            }
+        } catch (error) {
+            formStatus.textContent = 'Oops! There was a problem submitting your form.';
+            formStatus.className = 'error';
+        } finally {
+            submitButton.disabled = false;
+            submitButton.textContent = 'Send Message';
+            formStatus.style.display = 'block';
+            
+            // Hide status message after 5 seconds
+            setTimeout(() => {
+                formStatus.style.opacity = '0';
+                setTimeout(() => {
+                    formStatus.style.display = 'none';
+                    formStatus.style.opacity = '1';
+                }, 500);
+            }, 5000);
+        }
+    });
+}

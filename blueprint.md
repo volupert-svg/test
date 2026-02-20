@@ -13,6 +13,7 @@ This is a visually appealing and interactive web application for generating rand
     *   **Generate Button:** Features a gradient background and a "pop" animation on hover.
     *   **Theme Toggle:** A floating button to switch between dark and light modes, with persistent storage in `localStorage`.
     *   **Lotto Balls:** Animated appearance with random vibrant colors and hover effects.
+    *   **Partnership Form:** A sleek, AJAX-powered contact form with real-time feedback and modern styling.
 *   **Web Components:** The `<lotto-ball>` element encapsulates its own styling and logic using Shadow DOM, ensuring consistent rendering.
 *   **Animations:** Smooth transitions for theme switching and staggered animations for newly generated numbers.
 *   **Multi-set Generation:** Generates 5 sets of numbers at once for better user experience.
@@ -20,7 +21,8 @@ This is a visually appealing and interactive web application for generating rand
 
 ## Current Plan
 
-1.  **Bonus Number & Multi-set Generation:** Update the generation logic in `main.js` to produce 5 sets of 6+1 numbers.
-2.  **UI Layout Update:** Modify `index.html` and `style.css` to display the sets in a structured row-based layout.
-3.  **Bonus Number Styling:** Add a visual indicator for the bonus number (e.g., a "+" sign and specific styling).
-4.  **Git & Deployment:** Commit changes to the repository and ensure the latest version is deployed.
+1.  **Enhance Partnership Inquiry Form:** Improve the existing Formspree-powered contact form with AJAX submission and modern UI feedback.
+2.  **HTML Structure:** Update `index.html` with a clearer form structure and status message containers.
+3.  **Styling:** Refine `style.css` to add a "lifted" card effect for the form and better input focus states.
+4.  **JavaScript Integration:** Implement AJAX submission in `main.js` to prevent page reloads and show success/error messages.
+5.  **Deployment:** Configured Firebase Hosting (`firebase.json`). Pending user authentication and project selection.

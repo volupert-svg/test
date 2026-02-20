@@ -1,0 +1,15 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      ".idx/**",
+      "GEMINI.md",
+      "blueprint.md",
+      "README.md",
+      "firebase-debug.log"
+    ]
+  }
+}
