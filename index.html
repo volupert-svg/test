@@ -1,47 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <title>로또 골드 - 스마트한 로또 번호 생성기 및 분석</title>
+    <meta name="description" content="로또 골드와 함께 행운의 번호를 생성하세요. 전문가의 로또 통찰력, 확률 분석, 그리고 건전한 게임을 위한 도구를 제공합니다.">
     <link rel="stylesheet" href="style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4350285799531402"
      crossorigin="anonymous"></script>
 </head>
 <body>
-    <button id="theme-toggle" title="Toggle dark/light mode">🌙</button>
-    <main>
-        <h1>Lotto Number Generator</h1>
-        <div id="numbers-container"></div>
-        <button id="generate-button">Generate Numbers</button>
-        
-        <section id="partnership-form">
-            <h2>Partnership Inquiry</h2>
-            <p class="form-description">Interested in working with us? Send a message!</p>
+    <header>
+        <div class="header-container">
+            <div class="logo">로또 골드</div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#home">홈</a></li>
+                    <li><a href="#guides">로또 가이드</a></li>
+                    <li><a href="#partnership-form">문의하기</a></li>
+                    <li><a href="#about">소개</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" title="다크/라이트 모드 전환">🌙</button>
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="hero-section">
+            <h1>전문적인 로또 번호 생성</h1>
+            <p>데이터 기반의 확률과 세련된 인터페이스로 당신의 게임에 힘을 실어주세요.</p>
+        </section>
+
+        <section id="generator-card" class="card">
+            <div id="numbers-container"></div>
+            <button id="generate-button" class="btn-primary">행운의 번호 생성하기</button>
+        </section>
+
+        <section id="guides" class="content-section card">
+            <h2>로또 확률의 이해</h2>
+            <div class="grid">
+                <div class="feature-item">
+                    <h3>확률 분석</h3>
+                    <p>로또 시스템에서 무작위성이 어떻게 작동하는지 알아보세요. 모든 조합은 동일한 기회를 갖지만, 일부 사람들은 통계적 추세를 사용하는 것을 선호합니다.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>당첨 전략</h3>
+                    <p>미래를 예측할 수 있는 방법은 없지만, 다양한 번호 세트를 선택하면 잭팟을 다른 사람들과 공유하는 것을 피하는 데 도움이 될 수 있습니다.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>건전한 게임 문화</h3>
+                    <p>로또는 재미와 즐거움이 되어야 합니다. 예산을 세우고, 즐거움을 위해 플레이하며, 감당할 수 있는 것보다 더 많이 지출하지 마세요.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="partnership-form" class="card">
+            <h2>협력 문의</h2>
+            <p class="form-description">저희와 함께 일하는 데 관심이 있으신가요? 메시지를 보내주세요!</p>
             <form id="contact-form" action="https://formspree.io/f/xpqjjygv" method="POST">
                 <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    <label for="name">이름</label>
+                    <input type="text" id="name" name="name" placeholder="홍길동" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" name="email" placeholder="hong@example.com" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" placeholder="Tell us about your project..." required></textarea>
+                    <label for="message">메시지</label>
+                    <textarea id="message" name="message" placeholder="프로젝트에 대해 알려주세요..." required></textarea>
                 </div>
-                <button type="submit" id="submit-button">Send Message</button>
+                <button type="submit" id="submit-button" class="btn-primary">메시지 보내기</button>
                 <div id="form-status"></div>
             </form>
         </section>
 
-        <section id="comments-section">
-            <h2>Comments</h2>
+        <section id="about" class="content-section card">
+            <h2>로또 골드 소개</h2>
+            <p>로또 골드는 로또 애호가들을 위해 고품질의 도구를 제공하는 데 전념하고 있습니다. 현대적인 웹 기술과 사용자 중심의 디자인을 결합하여 커뮤니티에 가능한 최상의 경험을 선공합니다. 우리의 사명은 즐겁고 인터랙티브한 도구를 제공하는 동시에 건전한 게임 문화를 장려하는 것입니다.</p>
+        </section>
+
+        <section id="comments-section" class="card">
+            <h2>커뮤니티 토론</h2>
             <div id="disqus_thread"></div>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>댓글을 보려면 자바스크립트를 활성화하세요. <a href="https://disqus.com/?ref_noscript">Disqus 제공.</a></noscript>
         </section>
     </main>
-    <script src="main.js"></script>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>&copy; 2026 로또 골드. All rights reserved.</p>
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#privacy">개인정보 처리방침</a></li>
+                    <li><a href="#terms">이용약관</a></li>
+                    <li><a href="#disclaimer">책임 한계 고지</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- 정책 모달 / 컴플라이언스를 위한 숨겨진 섹션 -->
+    <div id="policy-container" style="display:none;">
+        <section id="privacy">
+            <h2>개인정보 처리방침</h2>
+            <p>귀하의 개인정보는 저희에게 중요합니다. 저희는 귀하의 개인 정보를 제3자에게 판매하지 않습니다. 문의 양식은 처리를 위해 Formspree를 사용합니다.</p>
+        </section>
+        <section id="terms">
+            <h2>이용약관</h2>
+            <p>이 사이트를 이용함으로써 귀하는 당사의 약관에 동의하게 됩니다. 이 서비스는 오직 오락 목적으로만 제공되며 로또 당첨을 보장하지 않습니다.</p>
+        </section>
+        <section id="disclaimer">
+            <h2>책임 한계 고지</h2>
+            <p>로또 결과는 무작위입니다. 책임감 있게 플레이하세요. 본인이나 주변 사람이 도박 문제가 있다면 전문가의 도움을 받으시기 바랍니다.</p>
+        </section>
+    </div>
+
+    <script src="main.js?v=1.0.1"></script>
 </body>
 </html>

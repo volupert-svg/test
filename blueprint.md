@@ -1,32 +1,31 @@
-# Lotto Number Generator
+# 로또 골드 - 프리미엄 번호 생성기 및 분석
 
-## Overview
+## 개요
 
-This is a visually appealing and interactive web application for generating random lottery numbers. It features a modern design, responsive layout, and dark/light mode support.
+로또 골드는 사용자에게 정교한 로또 번호 생성 경험을 제공하는 고품질 웹 애플리케이션입니다. 단순한 번호 생성을 넘어, 사용자 가치, 명확한 탐색, 그리고 구글 애드센스의 품질 표준 준수에 중점을 둡니다.
 
-## Style, Design, and Features
+## 스타일, 디자인 및 기능
 
-*   **Layout:** Centered card interface with a modern, clean aesthetic.
-*   **Color Palette:** Supports both Light and Dark themes. Light mode uses soft whites and vibrant blues, while Dark mode uses deep grays and high-contrast accents.
-*   **Typography:** Bold, modern sans-serif typography with strong hierarchy.
-*   **Interactivity:**
-    *   **Generate Button:** Features a gradient background and a "pop" animation on hover.
-    *   **Theme Toggle:** A floating button to switch between dark and light modes, with persistent storage in `localStorage`.
-    *   **Lotto Balls:** Animated appearance with random vibrant colors and hover effects.
-    *   **Partnership Form:** A sleek, AJAX-powered contact form with real-time feedback and modern styling.
-*   **Web Components:** The `<lotto-ball>` element encapsulates its own styling and logic using Shadow DOM, ensuring consistent rendering.
-*   **Animations:** Smooth transitions for theme switching and staggered animations for newly generated numbers.
-*   **Multi-set Generation:** Generates 5 sets of numbers at once for better user experience.
-*   **Bonus Number:** Each set includes a distinct bonus number, following official lottery rules.
-*   **Disqus Comments:** Integrated community discussion at the bottom of the page with dark/light mode compatibility.
-*   **Google AdSense:** Integrated for monetization with Auto Ads and verified via `ads.txt`.
+*   **전문적인 레이아웃:** 명확한 계층 구조를 가진 깨끗하고 다중 섹션 레이아웃. 직관적인 탐색을 위해 헤더-메인-푸터 구조를 사용합니다.
+*   **풍부한 콘텐츠 경험:** 방문자에게 진정한 가치를 제공하기 위해 로또 시스템, 확률 및 건전한 게임에 대한 자세한 가이드를 포함합니다.
+*   **현대적인 CSS (Baseline):**
+    *   **컨테이너 쿼리:** 구성 요소가 부모 컨테이너의 크기에 적응합니다.
+    *   **CSS 변수:** 중앙 집중식 테마 관리 (라이트/다크 모드).
+    *   **논리적 속성:** 다양한 쓰기 모드에서 레이아웃 일관성을 보장합니다.
+    *   **OKLCH 색상:** 프리미엄 느낌을 위한 선명하고 지각적으로 균일한 색상 팔레트.
+*   **인터랙티비티:**
+    *   **고급 생성기:** 시각적 피드백이 있는 다중 세트 번호 생성 (보너스 번호 제외).
+    *   **테마 전환:** 세련된 라이트 테마와 다크 테마 간의 원활한 전환.
+    *   **참여:** 커뮤니티 토론을 위한 Disqus 통합.
+*   **애드센스 최적화:**
+    *   **탐색:** "홈", "가이드", "소개", "문의"를 위한 명확한 헤더 메뉴.
+    *   **정책 페이지:** 개인정보 처리방침, 이용약관, 책임 한계 고지 전용 섹션 (승인을 위해 필수).
+    *   **Ads.txt:** 인증된 게시자 식별.
+    *   **UX 중심:** 빠른 로딩, 반응형 디자인 및 접근 가능한 UI.
 
-## Current Plan
+## 현재 계획 (한국어화 및 최적화 단계)
 
-1.  **Enhance Partnership Inquiry Form:** Improve the existing Formspree-powered contact form with AJAX submission and modern UI feedback.
-2.  **HTML Structure:** Update `index.html` with a clearer form structure and status message containers.
-3.  **Styling:** Refine `style.css` to add a "lifted" card effect for the form and better input focus states.
-4.  **JavaScript Integration:** Implement AJAX submission in `main.js` to prevent page reloads and show success/error messages.
-5.  **Deployment:** Configured Firebase Hosting (`firebase.json`). Pushed to GitHub for Cloudflare Pages deployment.
-6.  **Disqus Integration:** Added Disqus comment thread section and initialization script.
-7.  **Google AdSense Integration:** Added the AdSense script to `index.html` and created `ads.txt` for site verification and monetization.
+1.  **언어 현지화:** 모든 UI 텍스트와 콘텐츠를 한국어로 번역하여 국내 사용자에게 최적화된 경험을 제공합니다.
+2.  **번호 생성 로직 수정:** 사용자의 요청에 따라 보너스 번호를 제외한 6개의 번호만 생성하도록 로직을 단순화합니다.
+3.  **UI/UX 정교화:** 현대적인 CSS 기능을 사용하여 전문적이고 "떠 있는 듯한(lifted)" 느낌의 디자인을 유지합니다.
+4.  **콘텐츠 보강:** 애드센스 요구 사항을 충족하기 위해 한국어로 된 전문적인 정책 섹션을 유지 관리합니다.
